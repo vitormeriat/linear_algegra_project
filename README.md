@@ -1,6 +1,20 @@
-# How to Build a Matrix Module from Scratch
+<p align="center">
+    <h1 align="center">Build a Matrix Module from Scratch</h1>
+</p>
 
-> If you have been importing Numpy for matrix operations but don’t know how the module is built, this article will show you how to build your own matrix module
+<p align="center">If you have been importing Numpy for matrix operations but don’t know how the module is built, this article will show you how to build your own matrix module.</p>
+
+***
+
+<p align="center">
+    <b><a href="README.md#motivation">Motivation</a></b>
+    |
+    <b><a href="README.md#setup">Setup</a></b>
+    |
+    <b><a href="README.md#settings">Settings</a></b>
+    |
+    <b><a href="README.md#how-to">How to</a></b>
+</p>
 
 ## Motivation
 
