@@ -9,13 +9,14 @@ class Matrix:
 
     def __str__(self):
         m = len(self.A)  # Get the first dimension
-        mtxStr = ''
-
-        for i in range(m):
-            mtxStr += ('|' +
-                       ', '.join(map(lambda x: '{0:8.3f}'.format(x), self.A[i])) + '| \n')
-
-        return mtxStr
+        return ''.join(
+            (
+                '|'
+                + ', '.join(map(lambda x: '{0:8.3f}'.format(x), self.A[i]))
+                + '| \n'
+            )
+            for i in range(m)
+        )
 
     def __add__(self, other):
 
@@ -74,10 +75,7 @@ class Matrix:
             # to the elements in the same col of the second matrix
             for i in range(self.rows):
                 for j in range(self.cols):
-                    acc = 0
-
-                    for k in range(self.rows):
-                        acc += self.A[i][k] * other.A[k][j]
+                    acc = sum(self.A[i][k] * other.A[k][j] for k in range(self.rows))
 
                     C.A[i][j] = acc
 
