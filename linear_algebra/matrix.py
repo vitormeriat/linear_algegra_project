@@ -43,7 +43,8 @@ class Matrix:
     def __radd__(self, other):
         return self.__add__(other)
 
-    def __mul__(self, other):  # pointwise multiplication
+    # Pointwise multiplication
+    def __mul__(self, other):
 
         C = Matrix(dims=(self.rows, self.cols), fill=0)
         if isinstance(other, Matrix):
@@ -66,7 +67,8 @@ class Matrix:
 
         return self.__mul__(other)
 
-    def __matmul__(self, other):  # matrix-matrix multiplication
+    # Matrix-matrix multiplication
+    def __matmul__(self, other):
 
         if isinstance(other, Matrix):
             C = Matrix(dims=(self.rows, self.cols), fill=0)
@@ -75,7 +77,8 @@ class Matrix:
             # to the elements in the same col of the second matrix
             for i in range(self.rows):
                 for j in range(self.cols):
-                    acc = sum(self.A[i][k] * other.A[k][j] for k in range(self.rows))
+                    acc = sum(self.A[i][k] * other.A[k][j]
+                              for k in range(self.rows))
 
                     C.A[i][j] = acc
 
