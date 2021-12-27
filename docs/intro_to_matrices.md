@@ -52,3 +52,62 @@ $$
  \end{bmatrix}
  \end{aligned}
 $$
+
+If a term is missing in the equation, it means that the coefficient of that variable is 0.
+
+$$
+\begin{aligned}
+ 8y – 3z &= 19\\
+ 2x + z &= -5\\
+ 7x + 4y + 6z &= 28\\
+ \Downarrow\\
+ 0x + 8y – 3z &= 19\\
+ 2x + 0y + z &= -5\\
+ 7x + 4y + 6z &= 28\\
+ \end{aligned}
+$$
+
+If the constant terms are on the left side of the equal sign or variable terms are on the right side of the equal sign, we have to rearrange the equations to bring them to the standard form before representing them in the augmented matrix.
+
+Also, make sure that the sequence of the variable terms is uniform.
+
+$$
+\begin{aligned}
+ 3 – 5x + 7z &= 12y\\
+ 4x + y – 11 &= -9z\\
+ 6y + 8x &= 0\\
+ \Downarrow\\
+ – 5x -12y + 7z &= -3\\
+ 4x + y + 9z &= 11\\
+ 8x + 6y + 0z &= 0\\
+ \end{aligned}
+$$
+
+$$
+\begin{aligned}
+ \Rightarrow C =
+ \begin{bmatrix}
+ -5 & -12 & 7 & -3 \\
+ 4 & 1 & 9 & 11 \\
+ 8 & 6 & 0 & 0
+ \end{bmatrix}
+ \end{aligned}
+$$
+
+## Representation of Matrix Elements
+
+Consider the matrix $A$ with 2 rows and 4 columns. An individual element of the matrix is represented as $a_{ij}$, where $i$ is the row number and $j$ is the column number. The entire $2 \times 4$ matrix can be represented as:
+
+$$
+\begin{aligned}
+ A_{2\times4} =
+ \begin{bmatrix}
+ a_{11} & a_{12} & a_{13} & a_{14} \\
+ a_{21} & a_{22} & a_{23} & a_{24}
+ \end{bmatrix}
+ \end{aligned}
+$$
+
+## Creating Matrices in Python using NumPy
+
+Link to notebook...
